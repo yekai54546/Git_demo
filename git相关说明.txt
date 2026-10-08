@@ -1,0 +1,6 @@
+代理配置
+git config --global http.proxy http://127.0.0.1:7897
+git config --global https.proxy http://127.0.0.1:7897
+验证方法： 运行 git config --global --get http.proxy，如果输出 [http://127.0.0.1:7897](http://127.0.0.1:7897)，说明设置成功。
+检测github网络联通性：curl.exe -I https://github.com
+如果返回包含 HTTP/2 200 或 HTTP/1.1 200 OK，说明 Git 已成功通过本地代理连接上 GitHub。
